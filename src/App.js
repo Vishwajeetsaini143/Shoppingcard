@@ -1,5 +1,6 @@
 import { BrowserRouter as Router ,Routes,Route} from 'react-router-dom';
 import './App.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Card from './Component/Back/Card';
 import Header from './Component/Front/Header/Header.jsx'
 import Signup from './Component/Signup/Signup';

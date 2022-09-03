@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.Carousel-img{
+    height: 90vh;
+    
+    object-fit: cover;
+
+}

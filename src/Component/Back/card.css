@@ -28,6 +28,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 23px;
     
     
 }
@@ -45,8 +46,12 @@ body{
     padding: 10px;
    
 }
+.card img:hover{
+    transform: scale(0.8);
+}
 .card img{
    height: 130px;
+   
 }
 .card-btn{
     font-weight: 700;

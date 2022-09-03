@@ -26,7 +26,8 @@ return (
     )}
     <div className="cart-wraper">
       <div className="cart">
-        {cartItems.map((item) => (
+        { 
+        cartItems.map((item) => (
           <div key={item.id} className="cart-list">
             <div className="cart-img">
               
@@ -49,7 +50,8 @@ return (
           </div>
         ))}
       </div>
-      <div className="cart-price-details"> 
+      
+           <div className="cart-price-details"> 
       <h1>PRICE DETAILS</h1>
       <div>
         <div className="cart-price">
@@ -74,6 +76,7 @@ return (
 </div>
       
       </div>
+
     </div>
   </div>
 );

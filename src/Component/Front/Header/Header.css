@@ -2,9 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-  background-color: #eee;
+  background-color: indigo;
   box-shadow: 0 0 10px rgba(63, 61, 61, 0.9);
-  color: black;
+  color: #fff;
+  height: 90px;
+  position: sticky;
+  top: 0;
 
 }
 .header-logo{
@@ -12,12 +15,40 @@
     align-items: center;
     gap: 40px;
 }
+.logo img{
+    height: 25px;
+
+    
+}
+.logo{
+    line-height: 20px;
+}
+
+.logo-cart span{
+    color: yellow;
+    font-size: 20px;
+    
+    
+}
+.logo-cart span img{
+    height: 15px;
+    
+}
+.header-input{
+    box-shadow: 0 0 10px rgba(0, o, 0, 0.1);
+    background-color: #fff;
+    width: 400px;
+    color: black;
+    border-radius: 10px;
+}
+
 .header-input input{
     height: 40px;
     width: 350px;
     position: relative;
     border: none;
     border-radius: 10px;
+    background-color: transparent;
 
 }
 input::placeholder{
@@ -44,7 +75,7 @@ input::placeholder{
 
 }
 .header-links ul li  a{
-    color: black;
+    color: #fff;
 }
 .cart-box{
     position: relative;

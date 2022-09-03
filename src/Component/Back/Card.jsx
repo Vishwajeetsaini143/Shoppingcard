@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState } from "react";
 import "./card.css";
 import { Link } from "react-router-dom";
+import Carouselitem from "../Carousel/Carouselitem";
+
 
 function Card({ getData }) {
   const [myData, setMyData] = useState([]);
@@ -15,6 +17,8 @@ function Card({ getData }) {
 
   if(!myData) return <h1>Loding .....</h1>
   return (
+    <>
+    <Carouselitem/>
     <div className="shopping-card">
       {myData.map((post) => {
         const { id, category, title, image, price } = post;
@@ -37,6 +41,7 @@ function Card({ getData }) {
         );
       })}
     </div>
+    </>
   );
 }
 
