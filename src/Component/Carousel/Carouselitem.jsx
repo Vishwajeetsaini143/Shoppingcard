@@ -7,7 +7,7 @@ import './carousel.css'
 const Carouselitem = () => {
   return( 
     <div>
-   <Carousel infiniteLoop autoPlay={2}>
+   <Carousel infiniteLoop autoPlay={true} showThumbs={false} >
     <div className='Carousel-img'>
     <img src={img1} alt=''/>
 
@@ -28,6 +28,7 @@ const Carouselitem = () => {
 
    </Carousel>
    </div>
+   
   )
 }
 

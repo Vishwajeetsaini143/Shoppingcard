@@ -1,8 +1,8 @@
 .sign{
-    height: 400px;
+    /* height: 400px; */
     width: 320px;
-    background-color: aqua;
-    backdrop-filter: blur(30px);
+    /* background-color: rgba(255,255,255,0.2); */
+    /* backdrop-filter: blur(30px); */
     text-align: center;
     border-radius: 20px;
 }
@@ -12,14 +12,22 @@ button:active{
 .signup{
     padding: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.btn1{
+    padding-top: 20px;
 }
 .sign button{
+    cursor: pointer;
     height: 30px;
     width: 70px;
     font-size: 16px;
-    background-color: bisque;
+    background-color: rgba(255, 0, 0, 0.493);
     border-radius: 5px;
+    border: none;
+    color: #ffff;
+    letter-spacing: .5px;
+    
 }
 .sign h1{
     padding: 10px;

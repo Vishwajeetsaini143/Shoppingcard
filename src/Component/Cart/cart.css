@@ -40,7 +40,9 @@
     font-size: 20px;
 }
 .cart-list img{
-    height: 200px;
+    height: 180px;
+    width: 200px;
+object-fit: contain;
     padding-left: 10px;
     padding-top: 10px;
    

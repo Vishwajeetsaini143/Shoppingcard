@@ -1,58 +1,52 @@
 import { useState } from "react"
-import './signup.css'
+import './signup.css';
+import { auth } from "../firebase/firebase";
+
 const Signup=(()=>{
-    const [userRegistration,setUserRegistration]=useState({
+    const [user,setUser]=useState({
         username:"",
         email:"",
         phone:"",
         password:""
     });
-    const [record,setRecords] =useState([]);
+    
     const handleInput=(event) =>{
         const name =event.target.name;
         const value=event.target.value;
         console.log(name,value)
-        setUserRegistration({...userRegistration,[name] : value})
+        setUser({...user,[name] : value})
 
     }
-     const  handleSubmit=(event)=>{
+     const  handleSubmit=async(event)=>{
         event.preventDefault();
-        const newRecord ={...userRegistration, id:new Date().getTime.toString()}
-        console.log(record);
-        setRecords([...record,newRecord]);
-        console.log(record);
-        setUserRegistration({username:"",email:"",phone:"",password:""})
+       try {
+        const result=await auth.createUserWithEmailAndPassword(user.email,user.password);
+        console.log('result',result.user.email)
+        
+       } catch (error) {
+        console.log('error',error.message)
+        
+       }
+        setUser({username:"",email:"",phone:"",password:""})
 
      }
     return(
         <div className="block">
         <form action="" onSubmit={handleSubmit} className="sign">
             <h1>SIGNUP FORM</h1>
-            <div className="signup">
-                <label htmlFor="username">Fullname-</label>
-                <input type="text" name="username"  autoComplete="off" 
-                value={userRegistration.username}
-                onChange={handleInput}
-                id="username"/>
-            </div>
+           
             <div className="signup">
                 <label htmlFor="email">email-</label>
                 <input type="email" autoComplete="off"
-                 value={userRegistration.email}
+                 value={user.email}
                  onChange={handleInput}
                 name="email" id="email"/>
             </div>
-            <div className="signup">
-                <label htmlFor="phone">phone-</label>
-                <input type="text" name="phone"  autoComplete="off"
-                 value={userRegistration.phone}
-                 onChange={handleInput}
-                id="pohan"/>
-            </div>
+          
             <div className="signup">
                 <label htmlFor="password">password-</label>
                 <input type="password" name="password" autoComplete="off"
-                 value={userRegistration.password}
+                 value={user.password}
                  onChange={handleInput}
                 id="password"/>
             </div>
@@ -60,18 +54,7 @@ const Signup=(()=>{
             <button type="submit">Signup</button>
             </div>
         </form>
-        {
-            record.map((curElem)=>{
-                return(
-                    <div className="">
-                        <p>{curElem.username}</p>
-                        <p>{curElem.email}</p>
-                        <p>{curElem.phone}</p>
-                        <p>{curElem.password}</p>
-                    </div>
-                )
-            })
-        }
+      
         </div>
     )
 })

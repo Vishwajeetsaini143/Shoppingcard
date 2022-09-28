@@ -4,8 +4,9 @@
     
 }
 .Carousel-img{
-    height: 90vh;
+    height: 85vh;
     
     object-fit: cover;
+    z-index: 99;
 
 }

@@ -1,7 +1,20 @@
 .model{
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 26%;
+   left: 35%;
     z-index: 999;
+    height: 400px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    backdrop-filter:blur(30px);
+
+}
+.model-header p{
+    text-align: right;
+    padding: 10px;
+    font-size: 35px;
     color: red;
+    cursor: pointer;
 }

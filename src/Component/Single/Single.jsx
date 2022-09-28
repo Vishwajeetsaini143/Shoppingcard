@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./single.css";
 
-const Single = () => {
+const Single = ({getData}) => {
   const [shopping, setShopping] = useState([]);
   const { title } = useParams();
 
@@ -19,7 +19,9 @@ const Single = () => {
     getSingleproduct();
   }, []);
   return (
-    <div className="single-card">
+    <>
+    {
+      shopping? <div className="single-card">
       <div className="single-card-img">
         <img src={shopping.image} alt="" />
       </div>
@@ -27,10 +29,14 @@ const Single = () => {
         <h1>Category- {shopping.category}</h1>
         <h1>{shopping.title}</h1>
         <h3> Price-${shopping.price}</h3>
-        <button className="single-card-btn1">Add to Cart</button>
+        <button className="single-card-btn1" onClick={() => getData(shopping)}>Add to Cart</button>
         <button className="single-card-btn2">Buy Now</button>
       </div>
-    </div>
+    </div>:<h1>Loaidng..</h1>
+
+    }
+   </>
+  
   );
 };
 

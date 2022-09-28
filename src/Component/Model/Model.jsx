@@ -1,10 +1,14 @@
 
 import './Model.css'
 
-const Model = ({child}) => {
+const Model = ({children,setOpen}) => {
   return (
     <div className='model'>
-        {child}
+      <div className="model-header">
+        <p onClick={()=>setOpen(false)}>&times;</p>
+      </div>
+   
+        {children}
     </div>
   )
 }

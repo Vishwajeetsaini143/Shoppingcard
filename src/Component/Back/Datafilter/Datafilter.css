@@ -1,0 +1,12 @@
+.data-filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: red;
+    cursor: pointer;
+font-size: 18px;
+font-weight: bold;
+margin-top: 50px;
+}
